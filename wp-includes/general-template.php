@@ -3070,6 +3070,8 @@ function get_language_attributes( $doctype = 'html' ) {
 	return apply_filters( 'language_attributes', $output, $doctype );
 }
 
+
+
 /**
  * Displays the language attributes for the html tag.
  *
