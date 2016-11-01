@@ -10,3 +10,7 @@ RewriteRule . /baptizm.local/index.php [L]
 </IfModule>
 
 # END WordPress
+
+## Файл /home/localhost/www/baptizm.local/.htaccess
+## 192.168.0.200
+# dnwr_ip 192.168.0.200

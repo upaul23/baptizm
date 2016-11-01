@@ -1,5 +1,9 @@
 <?php
-get_header();?> 
+get_header();
+$k = get_the_category();
+$k = $k[0]->cat_ID;
+set_menu($k);
+?> 
 
             <div class="hero">
                 <div class="slides">

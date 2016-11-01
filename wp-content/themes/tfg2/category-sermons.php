@@ -7,6 +7,8 @@
  * @subpackage clean
  */
 
-get_header(); // Подключаем хедер ?>
+get_header();
+set_menu(2);
+// Подключаем хедер ?>
 Проповеди  тук тук
 <?php get_footer(); // Подключаем футер ?>

@@ -52,7 +52,7 @@
                 
                 <div class="container">
                     <div id="logo">
-                    <a href="index.html" class="branding">
+                    <a href="<?php bloginfo('home'); ?>" class="branding">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="" class="logo">
                         
                         <div class="site-title">«ПРЕОБРАЖЕНИЕ»</div>
@@ -60,22 +60,8 @@
                         
                     </a>
                     </div>
-
-                    <div class="main-navigation">
-                        <button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-                        <ul class="menu">
-                            <li class="menu-item current-menu-item"><a href="#about">О ЦЕРКВИ <small>About church</small></a></li>
-                            <li class="menu-item"><a href="#events">События<small>Events</small></a></li>
-                            <li class="menu-item"><a href="#">ПАСТОРЫ <small>Pastors</small></a></li>
-                            <li class="menu-item"><a href="<?php echo get_category_link(2); ?>">ПРОПОВЕДИ <small>Sermons</small></a></li>
-                            <li class="menu-item"><a href="events.html">СЛУЖЕНИЯ<small>Services</small></a></li>
-                            <li class="menu-item"><a href="families.html">ТРАНСЛЯЦИЯ<small>Watch live</small></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="mobile-navigation"></div>
-                </div>
-                <div>
-                <img src="http://baptizm.ru/wp-content/uploads/2012/02/icon-youtube.png">
-                </div>
-            </header> <!-- .site-header -->
+<?php
+//$k = get_the_category();
+//$k = $k[0]->cat_ID;
+//set_menu($k); ?>
+ 
