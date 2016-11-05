@@ -137,7 +137,8 @@ echo '                           <li class="menu-item"><a href="#">ПАСТОР�
 $currentMenu = 2;
 echo "<li class='menu-item ".isActive($activeMenu, $currentMenu)."'><a href=".get_category_link($currentMenu).">ПРОПОВЕДИ <small>Sermons</small></a></li>";
 echo '                           <li class="menu-item"><a href="events.html">СЛУЖЕНИЯ<small>Services</small></a></li>';
-echo '                           <li class="menu-item"><a href="families.html">ТРАНСЛЯЦИЯ<small>Watch live</small></a></li>';
+$currentMenu = 6;
+echo "                           <li class=\"menu-item ".isActive($activeMenu, $currentMenu)."\"><a href=\"".get_category_link($currentMenu)."\">ТРАНСЛЯЦИЯ<small>Watch live</small></a></li>";
 echo '                        </ul>
                     </div>
 
@@ -153,5 +154,24 @@ function isActive($activeMenu, $currentMenu){
             return 'current-menu-item';
         else echo "";
     }
+    
+    function getYoutubeDataXml($id) {
+    // Ключ для запросов
+    $api_key = 'AIzaSyA86frs4rm2u14AP0gxtuGlXwvfqztU1_M';
+    
+    // специальный адрес, отвечающий за выдачу фида
+    $url = 'https://www.googleapis.com/youtube/v3/search?part=snippet'
+         . '&channelId=' . $id
+         . '&order=date'    // упорядочивать по дате добавления
+         . '&maxResults=5'  // за раз получать не более 5 результатов
+         . '&fields=items/id/videoId'  // нам нужны только идентификаторы видео
+         . '&key=' . $api_key;
+    $buf = file_get_contents($url);
+    
+    // декодируем JSON данные
+    $json = json_decode($buf, 1);
+    
+    return $json;
+}
 
 

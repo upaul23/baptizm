@@ -1145,7 +1145,8 @@ form input[type="submit"], form button, form input[type="reset"] {
     color: #8f7655;
     font-size: 2em;
 	font-size: 29px;
-	}
+            text-shadow: 1px 1px 2px #a29c92, 1px 1px 1px #cccccc;
+    }
 
 .main-navigation {
   border-top: 1px solid #e5e5e5; }
@@ -1290,10 +1291,12 @@ form input[type="submit"], form button, form input[type="reset"] {
   .page-head .page-title {
     font-weight: 100;
     font-size: 72px;
-    font-size: 5.1428571429em;
+    font-size: 3.5em;
     margin-bottom: 0;
     color: white;
-    word-break: break-word; }
+    word-break: break-word; 
+        letter-spacing: 2px;
+  }
     @media screen and (max-width: 640px) {
       .page-head .page-title {
         font-size: 48px;
@@ -1520,9 +1523,40 @@ ul.bullet {
 .shedule-head{
 	font-weight: 600;
 	padding-bottom: 4px;
+        list-style-type: none;
+        font-size: 12pt;
 }
 
 .shedule{
 	padding-left: 16px;
 	padding-bottom: 10px;
+        font-size: 12pt;
+}
+
+.watchlive-block{
+	width: 66%;
+        float: left;
+        border-top: 1px solid #e5e5e5;
+}
+
+.video-border{
+    margin: 23px;
+    border: solid;
+    border-color: #c1c0bf;
+    height: 518px;
+}
+
+.socials{
+    bottom: 10px;
+    left: -12px;
+    position: relative;
+}
+
+.link-soc{
+    margin-left: 10px;
+}
+
+.link-soc:hover{
+    margin-left: 10px;
+        opacity: 0.7;
 }
