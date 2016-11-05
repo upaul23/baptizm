@@ -51,7 +51,7 @@
     <div class="widget">
         <h3 class="widget-title">Пожертвование</h3>
         <p>Все пожертвования поступают на счет церкви и будут использованы для нужд церкви.</p>
-        <a href="#" class="button">Пожертвовать церкви</a>
+        <a href="https://vmeste.yandex.ru/baptizm" target="_blank" class="button">Пожертвовать церкви</a>
     </div>
 
     <div class="widget">
