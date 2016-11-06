@@ -1565,6 +1565,7 @@ ul.bullet {
     float: left;
     width: 66%;
     border-top: 1px solid #e5e5e5;
+        padding-top: 40px;
 }
 
 .pastors-block p{

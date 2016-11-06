@@ -70,7 +70,6 @@ wp_footer(); // Необходимо для нормальной работы п
         <div class="colophon">© 2016 Церковь ЕХБ г. Самары «Преображение»</div>
     </div><!-- .container -->
 </footer> <!-- .site-footer -->
-
 </div>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.1.min.js"></script>
