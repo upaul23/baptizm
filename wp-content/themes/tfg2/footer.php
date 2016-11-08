@@ -41,8 +41,8 @@ wp_footer(); // Необходимо для нормальной работы п
                 <div class="widget">
                     <h3 class="widget-title">О Церкви</h3>  
                     <ul class="bullet">
-                        <li><a href="#">Наше вероучение</a></li>
-                        <li><a href="#">Наша история</a></li>
+                        <li><a href="<?php echo get_permalink(9) ?>">Наше вероучение</a></li>
+                        <li><a href="<?php echo get_permalink(16) ?>">Наша история</a></li>
                         <li><a href="#">Фильмы о истории церкви</a></li> 
                         <li><a href="#">Кто такие бапстисты?</a></li>
                         <li><a href="#">О союзе Евангельских-Христиан Баптистов</a></li> 
