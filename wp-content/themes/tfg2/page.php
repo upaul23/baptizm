@@ -14,6 +14,8 @@ set_menu(0);
         <div class="page-head" data-bg-image="<?php echo get_template_directory_uri(); ?>/images/page-head-1.jpg" style="background-image: url(&quot;images/page-head-1.jpg&quot;);">
             <div class="container">
                 <h2 class="page-title"><?php the_title(); // Заголовок    ?></h2>
+                
+                <div>Привет я тут</div>
             </div>
         </div>
         <div class="fullwidth-block">        

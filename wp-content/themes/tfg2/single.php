@@ -9,6 +9,9 @@
 get_header(); // Подключаем хедер?> 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
 <h1><?php the_title(); // Заголовок ?></h1>
+
+single
+<?php echo wpautop($post->post_content); ?>
 <?php the_content(); // Содержимое страницы ?>
 <?php echo 'Рубрики: '; the_category( ' | ' ); // Выводим категории поста ?>
 <?php the_tags( 'Тэги: ', ' | ', '' ); // Выводим тэги(метки) поста ?>

@@ -52,18 +52,25 @@ wp_footer(); // Необходимо для нормальной работы п
             </div>
             <div class="col-md-4">
                 <div class="widget">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=c4MwhUJxBxPd3cQ27bSmbMDxpJ1mf-OP&amp;width=308&amp;height=350&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+                    <h3 class="widget-title">Ссылки на ресурсы</h3>  
+                    <ul class="link-list">
+                        <li><i class="fa fa-net"> </i><a target="_blank" href="http://www.propovedi.ru/">Сайт propovedi.ru</a></li>
+                        <li><i class="fa fa-net"> </i><a href="http://ryagusov.ru/" target="_blank">Сайт проповедей Рягузова В.С.</a></li>
+                        <li><i class="fa fa-net"> </i><a href="http://alex-pro-1.livejournal.com/" target="_blank">Блог Алексея Прокопенко</a></li> 
+                        <li><i class="fa fa-net"> </i><a href="http://www.gotquestions.org/Russian/" target="_blank">Библейские ответы на разные вопросы gotquestions.org</a></li>
+                        <li><i class="fa fa-net"> </i><a href="http://slovo.org/" target="_blank">"Слово Благодати" миссия Алексея Коломейцева</a></li> 
+                     </ul>
                 </div>
             </div>
         </div> <!-- .row -->
         <div class="socials">
-            <a class="link-soc" href="http://www.youtube.com/channel/UCswJOTilEstJrT6Z_JQxLWQ">
+            <a class="link-soc" target="_blank" href="http://www.youtube.com/channel/UCswJOTilEstJrT6Z_JQxLWQ">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/icon-youtube.png">
             </a>
-            <a class="link-soc" href="http://vk.com/tcyouth">
+            <a class="link-soc" target="_blank" href="http://vk.com/tcyouth">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/icon-rss1.png">
             </a>
-            <a class="link-soc" href="https://www.instagram.com/church_preobrazhenie/">
+            <a class="link-soc" target="_blank" href="https://www.instagram.com/church_preobrazhenie/">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.png">
             </a>
         </div>

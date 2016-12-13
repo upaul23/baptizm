@@ -55,20 +55,12 @@
     </div>
 
     <div class="widget">
-        <h3 class="widget-title">Gallery updates</h3>
+        <h3 class="widget-title">Наш instagram</h3>
 
         <div class="galery-thumb">
-            <a href="#"><img src="images/gallery-thumb-1.jpg" alt=""></a>
-            <a href="#"><img src="images/gallery-thumb-2.jpg" alt=""></a>
-            <a href="#"><img src="images/gallery-thumb-3.jpg" alt=""></a>
-            <a href="#"><img src="images/gallery-thumb-4.jpg" alt=""></a>
-            <a href="#"><img src="images/gallery-thumb-5.jpg" alt=""></a>
-            <a href="#"><img src="images/gallery-thumb-6.jpg" alt=""></a>
+            <?php echo do_shortcode('[instagram-feed]') ?>
         </div>
     </div>
 
-    <div class="widget">
-        <h3 class="widget-title">Text widget </h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquam obcaecati velit, atque necessitatibus molestias ullam tempore itaque quidem sequi ea sed consectetur, eligendi cupiditate saepe! Hic veniam maiores explicabo.</p>
-    </div>
+   
 </div>
