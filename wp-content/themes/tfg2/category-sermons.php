@@ -26,14 +26,23 @@ set_menu(2);
                     <ul class="seremon-list large">
                         <?php
                         global $post;
-
+                        $posts = get_posts("&post_type=sermons");
+                        // pagination                        
+                        $total_posts = count($posts);
+                        $posts_perpage = 5;
+                        $pages = ceil($total_posts / $posts_perpage);
+                        if (array_key_exists('page', $_GET)) {
+                            $current_page = $_GET['page'];
+                        } else {
+                            $current_page = 0;
+                        }
+                        $filtered_posts = array_slice($posts, $current_page * $posts_perpage, $posts_perpage);
 // записываем $post во временную переменную $tmp_post
                         $tmp_post = $post;
-                        $args = array('posts_per_page' => 5, 'offset' => 1, 'category' => 3);
-                        $myposts = get_posts("&post_type=sermons");
+//                        $args = array('posts_per_page' => 5, 'offset' => 1, 'category' => 3);
                         ?>
                         <?php
-                        foreach ($myposts as $post) {
+                        foreach ($posts as $post) {
                             setup_postdata($post);
                             ?>
                             <li>
@@ -46,8 +55,8 @@ set_menu(2);
                                     </div>
                                     <p><?php echo get_post_meta($post->ID, 'Краткое описание (если нужно)', true) ?></p>
                                     <div><?php echo wpautop($post->post_content); ?></div>
-                                    
-                                      <?php
+
+                                    <?php
                                     if (get_post_meta($post->ID, "Тип проповеди", true) == "Аудио") {
 
                                         if (get_post_meta($post->ID, 'Внешний аудиофайл', true)) {
@@ -61,15 +70,37 @@ set_menu(2);
                                     ?> 
                                 </div>
                             </li>
-                                    <?php
-                                }
+                            <?php
+                        }
 
 // возвращаем былое значение $post
-                                $post = $tmp_post;
-                                ?>
+                        $post = $tmp_post;
+                        ?>
                     </ul>
+                    <?php
+                    if ($pages - 1 > 0) {
+                        $page = 0;
+                        $request = "";
+
+                        unset($_REQUEST["page"]);
+                        foreach ($_REQUEST as $key => $val) {
+                            $request .= '&' . $key . '=' . $val;
+                        }
+
+                        if ($pages > 1) {
+                            while ($page <= ($pages - 1)) {
+                                if ($page == $current_page) {
+                                    echo '<span>' . ($page + 1) . '</span>';
+                                } else {
+                                    echo '<a href="?page=' . ($page) . $request . '">' . ($page + 1) . '</a>';
+                                }
+                                $page++;
+                            }
+                        }
+                    }
+                    ?>	
                 </div>
-                        <?php get_sidebar() ?>
+                <?php get_sidebar() ?>
             </div>
         </div>
     </div>

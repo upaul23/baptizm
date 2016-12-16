@@ -7,7 +7,7 @@ set_menu($k);
 
 <div class="hero">
     <div class="slides">
-        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/slide-1.jpg">
+        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/3.jpg">
             <div class="container">
                 <div class="slide-content">
                     <small class="slide-subtitle">Только Богу слава</small>
@@ -18,7 +18,7 @@ set_menu($k);
             </div>
         </li>
 
-        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/slide-1.jpg">
+        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/2.jpg">
             <div class="container">
                 <div class="slide-content">
                     <small class="slide-subtitle">Только верой</small>
@@ -28,23 +28,33 @@ set_menu($k);
                 </div>
             </div>
         </li>
-        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/slide-1.jpg">
+        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/1.jpg">
             <div class="container">
                 <div class="slide-content">
-                    <small class="slide-subtitle">Только верой</small>
-                    <h2 class="slide-title">Sola fide</h2>
+                    <small class="slide-subtitle">Только Христос</small>
+                    <h2 class="slide-title">Solus Christus</h2>
 
-                    <a href="#" class="button">See our families</a>
+                    <a href="#" class="button">Кто такой Иисус Христос?</a>
                 </div>
             </div>
         </li>
-        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/slide-1.jpg">
+        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/5.jpg">
+            <div class="container">
+                <div class="slide-content">
+                    <small class="slide-subtitle">Только благодатью</small>
+                    <h2 class="slide-title">Sola gratia</h2>
+
+                    <a href="#" class="button">Что такое благодать?</a>
+                </div>
+            </div>
+        </li>
+        <li data-bg-image="<?php echo get_template_directory_uri(); ?>/images/6.jpg">
             <div class="container">
                 <div class="slide-content">
                     <small class="slide-subtitle">Только Писание</small>
                     <h2 class="slide-title">Sola scriptura</h2>
 
-                    <a href="#" class="button">Смотреть проповедь</a>
+                    <a href="#" class="button">Смотреть проповеди</a>
                 </div>
             </div>
         </li>
@@ -54,43 +64,28 @@ set_menu($k);
 <main id="events" class="main-content">
     <div class="fullwidth-block">
         <div class="container">
-            <h2 class="section-title">ПОСЛЕДНИЕ СОБЫТИЯ</h2>
-            <?php
-            $events = get_posts("&post_type=events");
-
-            //$post  =  
-            ?>
-
-
+            <h2 class="section-title">СОБЫТИЯ</h2>
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="news">
-                        <image class="news-image" src="<?php echo get_template_directory_uri(); ?>/images/news-thumb-1.jpg"></image>
-                        <h3 class="news-title"><a href="#">laboris nisi ut aliquip</a></h3>
-                        <small class="date"><i class="fa fa-calendar"></i>24 mar 2014</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="news">
-                        <image class="news-image" src="<?php echo get_template_directory_uri(); ?>/images/news-thumb-2.jpg"></image>
-                        <h3 class="news-title"><a href="#">laboris nisi ut aliquip</a></h3>
-                        <small class="date"><i class="fa fa-calendar"></i>24 mar 2014</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="news">
-                        <image class="news-image" src="images/news-thumb-3.jpg"></image>
-                        <h3 class="news-title"><a href="#">laboris nisi ut aliquip</a></h3>
-                        <small class="date"><i class="fa fa-calendar"></i>24 mar 2014</small>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="news">
-                        <image class="news-image" src="<?php echo get_template_directory_uri(); ?>/images/news-thumb-4.jpg"></image>
-                        <h3 class="news-title"><a href="#">laboris nisi ut aliquip</a></h3>
-                        <small class="date"><i class="fa fa-calendar"></i>24 mar 2014</small>
-                    </div>
-                </div>
+            <?php
+            $posts = get_posts ("&post_type=events&numberposts=4");
+            foreach ($posts as $post) {
+                echo '<a href="'. get_post_permalink($post->ID).'">';
+                echo '<div class="col-md-3 col-sm-6">';
+                    echo '<div class="news">';
+                        echo '<div class=news-title-block>';
+                        echo '<small class="date"><i class="fa fa-calendar"></i>'.date("d.m.Y", strtotime($post->post_date)).'</small>';
+                        echo '<h3 class="news-title">'.$post->post_title.'</h3>';
+                        echo '</div>';
+                        echo '<div class="news-picture"><image class="news-image" src="'.pos(wp_get_attachment_image_src(get_post_meta($post->ID, 'Иллюстрация (220px  150px)', true), "large")).'"></image></div>';
+                        echo '<div class="news-short">'.get_post_meta($post->ID, 'Короткая версия', true).'</div>';                 
+                        
+                    echo '</div>';
+                echo '</div>';
+                echo '</a>' ;
+            }
+            
+            ?>
+                       
             </div> <!-- .row -->
         </div> <!-- .container -->
     </div> <!-- section -->

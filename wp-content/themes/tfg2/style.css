@@ -656,6 +656,7 @@ form input[type="submit"], form button, form input[type="reset"] {
         width: 16.6666666667%; }
 
     .col-md-3 {
+        border-right: 1px solid #ccc;
         width: 25%; }
 
     .col-md-4 {
@@ -1254,7 +1255,23 @@ form input[type="submit"], form button, form input[type="reset"] {
     box-shadow: none;
     border-radius: 0;
     font-size: 18px;
-    font-size: 1.2857142857em; }
+    font-size: 1.2857142857em;
+    opacity: 0.8;
+}
+
+.hero .slides .button:hover, .hero .slides form input[type="submit"]:hover, form .hero .slides input[type="submit"]:hover, .hero .slides form button:hover, form .hero .slides button:hover, .hero .slides form input[type="reset"]:hover, form .hero .slides input[type="reset"]:hover {
+    position: relative;
+    height: 50px;
+    background: url(images/button-bg.png);
+    padding: 15px 10px 15px 25px;
+    border-bottom: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 18px;
+    font-size: 1.2857142857em;
+    opacity: 1;
+   }
+
 .hero .slides .button:after, .hero .slides form input[type="submit"]:after, form .hero .slides input[type="submit"]:after, .hero .slides form button:after, form .hero .slides button:after, .hero .slides form input[type="reset"]:after, form .hero .slides input[type="reset"]:after {
     content: " ";
     height: 50px;
@@ -1269,7 +1286,17 @@ form input[type="submit"], form button, form input[type="reset"] {
     left: 0;
     bottom: 20px;
     z-index: 9;
-    text-align: center; }
+    text-align: center;
+    opacity: 0.8;}
+.hero .flex-control-nav:hover {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    z-index: 9;
+    text-align: center;
+    opacity: 1;}
+
 .hero .flex-control-nav li {
     display: inline-block;
     margin: 0 5px; }
@@ -1312,16 +1339,19 @@ form input[type="submit"], form button, form input[type="reset"] {
 
 .news {
     text-align: center;
-    margin-bottom: 30px; }
+    height: 380px;
+}
 .news .news-image {
     width: 100%;
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px; }
+    margin-bottom: 20px; 
+    border: 1px solid #e5e5e5;
+}
 .news .news-title {
     font-size: 14px;
     font-size: 1em;
-    margin: 0 0 10px; }
+    margin: 5px 0 5px; }
 .news .date {
     color: #a59e95;
     font-size: 12px;
@@ -1330,7 +1360,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     text-transform: lowercase; }
 .news .date .fa {
     font-size: 16px;
-    font-size: 1.1428571429rem;
+    font-size: 10pt;
     margin-right: 5px; }
 
 .event-list {
@@ -1672,5 +1702,33 @@ ul.link-list li a {
     color: #acacb1; }
 ul.link-list li a:hover {
     color: #8f7655; }
+
+.news-short {
+   
+}
+
+.news-short p{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ad9ea5;
+}
+
+.news-picture{
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 9px;
+    min-height: 220px;w
+}
+.news-title-block{
+   height: 62px;
+   margin-bottom: 5px;
+}
+
+.news-title-block small{
+   font-size: 10pt; 
+}
+    
+
     
 

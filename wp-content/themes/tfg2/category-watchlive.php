@@ -3,7 +3,7 @@ get_header();
 set_menu(6);
 ?> 
 <main class="main-content">
-    <div class="page-head" data-bg-image="<?php echo get_template_directory_uri(); ?>/images/page-head-1.jpg" style="background-image: url(&quot;images/page-head-1.jpg&quot;);">
+    <div class="page-head" data-bg-image="<?php echo get_template_directory_uri(); ?>/images/4.jpg" style="background-image: url(&quot;images/4.jpg&quot;);">
         <div class="container">
             <h2 class="page-title">Трансляция</h2>
         </div>
