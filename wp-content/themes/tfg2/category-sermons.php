@@ -26,24 +26,27 @@ set_menu(2);
                     <ul class="seremon-list large">
                         <?php
                         global $post;
+                        global $pages;
                         $posts = get_posts("&post_type=sermons");
                         // pagination                        
                         $total_posts = count($posts);
-                        $posts_perpage = 5;
+                        $posts_perpage = 4;
                         $pages = ceil($total_posts / $posts_perpage);
                         if (array_key_exists('page', $_GET)) {
                             $current_page = $_GET['page'];
                         } else {
                             $current_page = 0;
                         }
+
                         $filtered_posts = array_slice($posts, $current_page * $posts_perpage, $posts_perpage);
+                        $posts = array_slice($posts, $current_page * $posts_perpage, $posts_perpage);
 // записываем $post во временную переменную $tmp_post
                         $tmp_post = $post;
 //                        $args = array('posts_per_page' => 5, 'offset' => 1, 'category' => 3);
                         ?>
                         <?php
                         foreach ($posts as $post) {
-                            setup_postdata($post);
+                            //setup_postdata($post);
                             ?>
                             <li>
 
@@ -87,6 +90,9 @@ set_menu(2);
                             $request .= '&' . $key . '=' . $val;
                         }
 
+                        echo '<div class="wrapper">';
+                        echo '</div><div class="paginator">';
+                        echo '<span>Страницы: </span>';
                         if ($pages > 1) {
                             while ($page <= ($pages - 1)) {
                                 if ($page == $current_page) {
@@ -98,12 +104,14 @@ set_menu(2);
                             }
                         }
                     }
-                    ?>	
-                </div>
-                <?php get_sidebar() ?>
+                    ?>
+                
             </div>
         </div>
+        <?php get_sidebar() ?>
     </div>
+</div>
+</div>
 </main>
 
 <?php
