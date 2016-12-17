@@ -1270,7 +1270,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     font-size: 18px;
     font-size: 1.2857142857em;
     opacity: 1;
-   }
+}
 
 .hero .slides .button:after, .hero .slides form input[type="submit"]:after, form .hero .slides input[type="submit"]:after, .hero .slides form button:after, form .hero .slides button:after, .hero .slides form input[type="reset"]:after, form .hero .slides input[type="reset"]:after {
     content: " ";
@@ -1672,27 +1672,27 @@ ul.bullet li a:hover {
     padding-bottom: 5px;
     text-transform: uppercase;
 }
-    .last-sermon .seremon-meta {
-        font-size: 12px;
-        font-size: 0.8571428571rem;;
-        color: #a59e95;
-        padding-left: 23px;
-        font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
-    }
-    .last-sermon .seremon-meta .pastor {
-        
-    }
-    .last-sermon .seremon-meta .fa {
-        width: 20px; }
-    .last-sermon .sermon-content{
-        
-        margin-top: 13px;
-    }
-    .last-sermon.large .seremon-meta .pastor, .seremon-list.large .seremon-meta .date {
-        display: inline-block;
-        margin-right: 20px; }
-    
-    ul.link-list {
+.last-sermon .seremon-meta {
+    font-size: 12px;
+    font-size: 0.8571428571rem;;
+    color: #a59e95;
+    padding-left: 23px;
+    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
+}
+.last-sermon .seremon-meta .pastor {
+
+}
+.last-sermon .seremon-meta .fa {
+    width: 20px; }
+.last-sermon .sermon-content{
+
+    margin-top: 13px;
+}
+.last-sermon.large .seremon-meta .pastor, .seremon-list.large .seremon-meta .date {
+    display: inline-block;
+    margin-right: 20px; }
+
+ul.link-list {
     list-style: none;
     list-style-position: inside; }
 ul.link-list li {
@@ -1704,7 +1704,7 @@ ul.link-list li a:hover {
     color: #8f7655; }
 
 .news-short {
-   
+
 }
 
 .news-short p{
@@ -1721,14 +1721,29 @@ ul.link-list li a:hover {
     min-height: 220px;w
 }
 .news-title-block{
-   height: 62px;
-   margin-bottom: 5px;
+    height: 62px;
+    margin-bottom: 5px;
 }
 
 .news-title-block small{
-   font-size: 10pt; 
+    font-size: 10pt; 
 }
-    
 
+.paginator a{
+    display: block;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.paginator span{
+    display: block;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.paginator {
     
+    margin: 0px 0 0 0;
+    padding-top: 20px;
+}
 
